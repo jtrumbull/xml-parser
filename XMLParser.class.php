@@ -71,4 +71,22 @@ class XMLParser {
 
     private static function _bool($bool) { return $bool?'TRUE':'FALSE'; }
 
+    public static function decode( $xml, $uproot = FALSE ) {
+        if (!$xml instanceof SimpleXMLElement) {
+            $xml = new SimpleXMLElement($xml);
+        } return self::_toArray( $xml );
+    }
+
+    private static function _toArray( $element ) {
+        $array = []; $attributes = (array)$element->attributes();
+        if(array_key_exists('@attributes',$attributes)){ $array['attr:'] = $attributes['@attributes']; }
+        foreach($element->children() as $key => $child) {
+            $value = (string)$child;
+            $_children = self::_toArray($child);
+            $_push = ($_hasChild = (count($_children)>0)) ? $_children : $value;
+            if( $_hasChild && !empty($value) && $value !== '') { $_push[]=$value; }
+            $array[$key] = $_push;
+        }
+        return $array;
+    }
 }
