@@ -1,8 +1,8 @@
 <?php
-// namespace XMLParser;
-// use Exception;
-// use InvalidArgumentException;
-// use SimpleXMLElement;
+namespace XMLParser;
+use Exception;
+use InvalidArgumentException;
+use SimpleXMLElement;
 
 class XMLParser {
 
