@@ -44,7 +44,7 @@ class XMLParser {
     return isset($xml) ? $xml : null; // isset() essentially to make editor happy.
   }
 
-  private function _validateEncodeData ($data)
+  private static function _validateEncodeData ($data)
   {
     if (is_object($data)) {
       throw new InvalidArgumentException(
@@ -54,7 +54,7 @@ class XMLParser {
     return $data;
   }
 
-  private function _addChildren (SimpleXMLElement $element, $data)
+  private static function _addChildren (SimpleXMLElement $element, $data)
   {
     foreach ($data as $key => $value) {
       $regex = '/^'.self::$_defaultAttrTag.'([a-z0-9\._-]*)/';
