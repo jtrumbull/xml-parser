@@ -22,8 +22,10 @@ include 'XMLParser.class.php';
 ##Usage
 
 ```PHP
-include 'XMLParser.class.php'; // Include the project
-header('Content-type: text/xml'); // Define the content-type
+header('Content-type: text/xml');
+
+require_once 'XMLParser.class.php';
+use XMLParser\XMLParser;
 
 $data = array(
   'attr:status'=>'success',
@@ -80,14 +82,15 @@ Will output:
 
 ## Documentation
 
-### XMLParser::encode()
+### XMLParser\XMLParser::encode()
 
 **Syntax:** 
 ```PHP
 SimpleXMLElement XMLParser::encode( mixed $data [, string $root] )
 ```
+**Returns:** SimpleXMLElement 
 
-### XMLParser::decode()
+### XMLParser\XMLParser::decode()
 **Syntax:** 
 ```PHP
 Array XMLParser::encode( mixed $string )
@@ -95,6 +98,9 @@ Array XMLParser::encode( mixed $string )
 **Returns:** Array 
 
 ## Contributing
+
+Check out the [issue](https://github.com/jtrumbull/XMLParser/issues) tracker, if 
+your issue or feature request has not addressed open a new issue.
 
 ## Community
 
