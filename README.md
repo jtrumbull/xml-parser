@@ -1,7 +1,7 @@
 # XMLParser
 I needed a quick way of outputting XML from an associative array on a few projects -this was the end result. I created 
 this repository for later reference and fellow devs. At the time, It served it's purpose, however I am not actively 
-developing this project -see the contributing section.
+developing this project -see the [Contributing](#contributing) section.
 
 ## Table of contents
 * [Installation](#installation)
