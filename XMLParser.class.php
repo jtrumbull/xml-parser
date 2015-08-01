@@ -118,25 +118,7 @@ class XMLParser {
     {
       $xml = new SimpleXMLElement($xml);
     }
-    return self::_toArray($xml);
+    return json_decode(json_encode($xml),false);
   }
 
-  private static function _toArray (SimpleXMLElement $element)
-  {
-    $array = [];
-    $attributes = (array)$element->attributes();
-    if (array_key_exists('@attributes',$attributes)){
-      $array['attr:'] = $attributes['@attributes'];
-    }
-    foreach ($element->children() as $key => $child) {
-      $value = (string)$child;
-      $_children = self::_toArray($child);
-      $_push = ($_hasChild = (count($_children)>0)) ? $_children : $value;
-      if( $_hasChild && !empty($value) && $value !== '') {
-        $_push[]=$value;
-      }
-      $array[$key] = $_push;
-    }
-    return $array;
-  }
 }
