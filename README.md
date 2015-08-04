@@ -12,19 +12,13 @@ developing this project -see the [Contributing](#contributing) section.
 * [Copyright and license](#copyright-and-license)
 
 ## Installation
- * Download XMLParser from GitHub
- * Include into your source:
+ * composer require jtrumbull/xml-parser
  
-```PHP
-include 'XMLParser.class.php';
-```
-
 ##Usage
 
 ```PHP
 header('Content-type: text/xml');
 
-require_once 'XMLParser.class.php';
 use XMLParser\XMLParser;
 
 $data = array(
