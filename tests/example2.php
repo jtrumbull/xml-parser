@@ -1,6 +1,5 @@
 <?php
 header('Content-type: text/xml');
-include '../xml-parser.class.php';
 use XMLParser\XMLParser;
 
 class klass {
