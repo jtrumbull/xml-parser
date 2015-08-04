@@ -1,6 +1,7 @@
 <?php
 header('Content-type: text/xml');
-include '../XMLParser.class.php';
+include '../xml-parser.class.php';
+use XMLParser\XMLParser;
 
 $xml = XMLParser::encode(array(
     'attr:status'=>'success',
