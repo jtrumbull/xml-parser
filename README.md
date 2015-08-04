@@ -93,7 +93,7 @@ SimpleXMLElement XMLParser::encode( mixed $data [, string $root] )
 ### XMLParser\XMLParser::decode()
 **Syntax:** 
 ```PHP
-Array XMLParser::encode( mixed $string )
+Array XMLParser::decode( mixed $string )
 ```
 **Returns:** Array 
 
