@@ -1,11 +1,15 @@
 <?php
 header('Content-type: text/xml');
-include '../XMLParser.class.php';
+include '../xml-parser.class.php';
+use XMLParser\XMLParser;
 
-$xml = XMLParser::encode(
-    array(
-        array(1,2,3,4,5),
-        array(10,12,'A')
-    )
-);
+class myClass {
+
+  public $username = 'john_smith@some.domain';
+  public $password = 'secret';
+  public $greeting = 'Johnny boy.';
+
+}
+$x = new myClass();
+$xml = XMLParser::encode(new myClass());
 echo $xml->asXML();
