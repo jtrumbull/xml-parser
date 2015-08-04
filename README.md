@@ -100,7 +100,7 @@ Array XMLParser::decode( mixed $string )
 ## Contributing
 
 Check out the [issue](https://github.com/jtrumbull/XMLParser/issues) tracker, if 
-your issue or feature request has not addressed open a new issue.
+your issue or feature request has not addressed open a new issue. All pull requests are welcome.
 
 ## Community
 
