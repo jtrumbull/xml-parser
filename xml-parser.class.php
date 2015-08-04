@@ -44,9 +44,24 @@ class XMLParser {
     return isset($xml) ? $xml : null; // isset() essentially to make editor happy.
   }
 
+  public static function objectToArray($std) {
+    if (is_object($std)) {
+      $std = get_object_vars($std);
+    }
+    if (is_array($std)) {
+      return array_map(['self','objectToArray'], $std);
+    }
+    else {
+      return $std;
+    }
+  }
+
   private static function _validateEncodeData ($data)
   {
-    if (is_object($data)) {
+    if(is_object($data)){ // Try conversion
+      $data = self::objectToArray($data);
+    }
+    if (is_object($data)) { // If it's still an object throw exception
       throw new InvalidArgumentException(
         "Invalid data type supplied for XMLParser::encode"
       );
