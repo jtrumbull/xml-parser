@@ -1,0 +1,7 @@
+{
+    "name": "jtrumbull/XMLParser",
+    "description": "PHP Class that parses XML objects",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
