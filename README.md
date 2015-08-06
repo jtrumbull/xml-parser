@@ -87,9 +87,9 @@ SimpleXMLElement XMLParser::encode( mixed $data [, string $root] )
 ### XMLParser\XMLParser::decode()
 **Syntax:** 
 ```PHP
-Array XMLParser::decode( mixed $string )
+json XMLParser::decode( mixed $string )
 ```
-**Returns:** Array 
+**Returns:** json 
 
 ## Contributing
 
