@@ -2,7 +2,8 @@
     "name": "jtrumbull/xml-parser",
     "description": "PHP Class that parses XML objects",
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+        "ext-simplexml": "*"
     },
     "autoload": {
         "psr-4": {
