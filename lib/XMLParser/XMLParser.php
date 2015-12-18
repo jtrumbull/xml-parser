@@ -18,6 +18,8 @@ class XMLParser {
 
   private static $_defaultAttrTag  = 'attr:';
 
+  public static $caseSensitive     = false;
+
   public static function encode ($data, $root = null)
   {
     if ($data instanceof SimpleXMLElement) {
@@ -113,6 +115,9 @@ class XMLParser {
       '/ /' => '_'
     ];
     $string = preg_replace(array_keys($p), array_values($p), $string);
+    if (self::$caseSensitive) {
+      return $string;
+    }
     return strtolower($string);
   }
 
