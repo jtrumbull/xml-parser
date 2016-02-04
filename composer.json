@@ -4,6 +4,7 @@
     "require": {
         "php": ">=5.3.0"
     },
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "XMLParser\\": "lib/XMLParser"
