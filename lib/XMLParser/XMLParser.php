@@ -138,7 +138,7 @@ class XMLParser {
     {
       $xml = new SimpleXMLElement($xml);
     }
-    return json_decode(json_encode($xml),false);
+    return json_encode($xml);
   }
 
 }
