@@ -12,9 +12,14 @@ developing this project -see the [Contributing](#contributing) section.
 * [Copyright and license](#copyright-and-license)
 
 ## Installation
- * composer require jtrumbull/xml-parser
+```bash
+composer require jtrumbull/xml-parser
+```
+
+
+
  
-##Usage
+## Usage
 
 ```PHP
 header('Content-type: text/xml');
