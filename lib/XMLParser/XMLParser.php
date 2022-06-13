@@ -8,7 +8,7 @@ class XMLParser {
 
   private static $_defaultRootNode = 'root';
 
-  private static $_defaultListNode = 'list';
+  private static $_defaultListNode = '';
 
   private static $_defaultItemNode = 'item';
 
